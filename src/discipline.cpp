@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<Discipline> Discipline::read_file(const string& path) {
+void Discipline::get_disciplines_from_csv(const string& path) {
   ifstream fp(path);
   if (!fp) {
     cout << "unable to open file!" << '\n';
@@ -11,7 +11,6 @@ vector<Discipline> Discipline::read_file(const string& path) {
   int buffer = 100, pos = 0;
   fp.ignore(buffer, '\n');
   string line;
-  vector<Discipline> dis;
   string d, c, prs, cs;
   int j = 0, k = 0, l = 0;
   while (getline(fp, line, '\n')) {
@@ -43,8 +42,18 @@ vector<Discipline> Discipline::read_file(const string& path) {
       }
       cs += line[l];
     }
-    dis.push_back({d, stoi(c), prs, stoi(cs)});
+    disciplines.push_back({d, stoi(c), prs, stoi(cs)});
     d = c = prs = cs = "";
   }
-  return dis;
+}
+
+void Discipline::add(string _name, int _code, string _prerequisites, int _codes) {
+  disciplines.push_back({_name, _code, _prerequisites, _codes});
+}
+
+void Discipline::show_disciplines() {
+  cout << "Nome" << " " << "Código" << '\n';
+  for (int i = 0; i < (int) disciplines.size(); i++) {
+    cout << disciplines[i].name << ": " << disciplines[i].code << '\n';
+  }
 }
