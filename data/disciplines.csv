@@ -1,46 +1,46 @@
-disciplines,codes,prerequisite1,code1,prerequisite2,code2
-cálculo 1,113034,null,-1,null,-1
-algoritmos e programação de computadores,113476,null,-1,null,-1
-desenho industrial assistido por computador,199176,null,-1,null,-1
-engenharia e ambiente,198005,null,-1,null,-1
-introdução à engenharia,198013,null,-1,null,-1
-cálculo 2,113042,cálculo 1,113034,null,-1
-física 1,118001,null,-1,null,-1
-física 1 experimental,118010,null,-1,null,-1
-introdução à álgebra linear,113093,null,-1,null,-1
-probabilidade e estatística à engenharia,195332,cálculo 1,113034,null,-1
-métodos numéricos para engenharia,195413,cálculo 2,113042,null,-1
-engenharia econômica,193321,null,-1,null,-1
-humanidades e cidadania,199133,null,-1,null,-1
-teoria de eletrônica digital 1,119482,introdução à álgebra linear,113093,null,-1
-prática de eletrônica digital 1,119466,introdução à álgebra linear,113093,null,-1
-orientação a objetos,195341,algoritmos e programação de computadores,113476,null,-1
-matemática discreta 1,1,null,-1,null,-1
-gestão da produção e qualidade,201626,engenharia econômica,193321,null,-1
-métodos de desenvolvimento de software,193640,orientação a objetos,195341,null,-1
-estruturas de dados 1,193704,algoritmos e programação de computadores,113476,null,-1
-fundamentos de arquiteturas de computadores,193674,teoria de eletrônica digital 1,119482,prática de eletrônica digital 1,119466
-matemática discreta 2,2,matemática discreta 1,1,null,-1
-projeto integrador de engenharia 1,193861,orientação a objetos,195341,null,-1
-interação humano computador,201316,métodos de desenvolvimento de software,193640,null,-1
-requisitos de software,201308,métodos de desenvolvimento de software,193640,null,-1
-sistemas de banco de dados 1,193631,matemática discreta 2,2,null,-1
-fundamentos de sistemas operacionais,201286,fundamentos de arquiteturas de computadores,193674,null,-1
-compiladores 1,101095,estruturas de dados 1,193704,null,-1
-estruturas de dados 2,103209,estruturas de dados 1,193704,null,-1
-qualidade de software 1,208698,interação humano computador,201316,gestão da produção e qualidade,201626
-testes de software,206580,métodos de desenvolvimento de software,193640,null,-1
-arquitetura e desenho de software,203882,requisitos de software,201308,null,-1
-fundamentos de redes de computadores,203912,fundamentos de sistemas operacionais,201286,null,-1
-sistemas de banco de dados 2,115576,sistemas de banco de dados 1,193631,null,-1
-projeto e análise de algoritmos,117536,cálculo 1,113034,estruturas de dados 1,193704
-técnicas de programação em plataformas emergentes,206601,testes de software,206580,arquitetura e desenho de software,203882
-paradigmas de programação,203904,orientação a objetos,195341,null,-1
-fundamentos de sistemas embarcados,3,fundamentos de sistemas operacionais,201286,null,-1
-programação para sistemas paralelos e distribuídos,206610,fundamentos de redes de computadores,203912,estruturas de dados 2,103209
-engenharia de produto de software,203874,técnicas de programação em plataformas emergentes,206601,null,-1
-gerência de configuração e evolução de software,206598,testes de software,206580,null,-1
-estágio supervisionado,102512,null,-1,null,-1
-projeto integrador de engenharia 2,208175,projeto integrador de engenharia 1,193861,engenharia de produto de software,203874
-trabalho de conclusão de curso 1,101141,null,-1,null,-1
-trabalho de conclusão de curso 2,102415,trabalho de conclusão de curso 1,101141,null,-1
+disciplines,codes,prerequisite1,code1
+cálculo 1,113034,null,-1
+algoritmos e programação de computadores,113476,null,-1
+desenho industrial assistido por computador,199176,null,-1
+engenharia e ambiente,198005,null,-1
+introdução à engenharia,198013,null,-1
+cálculo 2,113042,cálculo 1,113034
+física 1,118001,null,-1
+física 1 experimental,118010,null,-1
+introdução à álgebra linear,113093,null,-1
+probabilidade e estatística à engenharia,195332,cálculo 1,113034
+métodos numéricos para engenharia,195413,cálculo 2,113042
+engenharia econômica,193321,null,-1
+humanidades e cidadania,199133,null,-1
+teoria de eletrônica digital 1,119482,introdução à álgebra linear,113093
+prática de eletrônica digital 1,119466,introdução à álgebra linear,113093
+orientação a objetos,195341,algoritmos e programação de computadores,113476
+matemática discreta 1,1,null,-1
+gestão da produção e qualidade,201626,engenharia econômica,193321
+métodos de desenvolvimento de software,193640,orientação a objetos,195341
+estruturas de dados 1,193704,algoritmos e programação de computadores,113476
+fundamentos de arquiteturas de computadores,193674,teoria de eletrônica digital 1 & prática de eletrônica digital 1,119482 & 119466
+matemática discreta 2,2,matemática discreta 1,1
+projeto integrador de engenharia 1,193861,orientação a objetos,195341
+interação humano computador,201316,métodos de desenvolvimento de software,193640
+requisitos de software,201308,métodos de desenvolvimento de software,193640
+sistemas de banco de dados 1,193631,matemática discreta 2,2
+fundamentos de sistemas operacionais,201286,fundamentos de arquiteturas de computadores,193674
+compiladores 1,101095,estruturas de dados 1,193704
+estruturas de dados 2,103209,estruturas de dados 1,193704
+qualidade de software 1,208698,interação humano computador & gestão da produção e qualidade,201316 & 201626
+testes de software,206580,métodos de desenvolvimento de software,193640
+arquitetura e desenho de software,203882,requisitos de software,201308
+fundamentos de redes de computadores,203912,fundamentos de sistemas operacionais,201286
+sistemas de banco de dados 2,115576,sistemas de banco de dados 1,193631
+projeto e análise de algoritmos,117536,Cálculo 1 & estruturas de dados 1,113034 & 193704
+técnicas de programação em plataformas emergentes,206601,testes de software & arquitetura e desenho de software,206580 & 203882
+paradigmas de programação,203904,orientação a objetos,195341
+fundamentos de sistemas embarcados,3,fundamentos de sistemas operacionais,201286
+programação para sistemas paralelos e distribuídos,206610,fundamentos de redes de computadores & estruturas de dados 2,203912 & 103209
+engenharia de produto de software,203874,técnicas de programação em plataformas emergentes,206601
+gerência de configuração e evolução de software,206598,testes de software,206580
+estágio supervisionado,102512,null,-1
+projeto integrador de engenharia 2,208175,projeto integrador de engenharia 1 & engenharia de produto de software,193861 & 203874
+trabalho de conclusão de curso 1,101141,null,-1
+trabalho de conclusão de curso 2,102415,trabalho de conclusão de curso 1,101141
