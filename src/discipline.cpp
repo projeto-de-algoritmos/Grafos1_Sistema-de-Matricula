@@ -12,8 +12,8 @@ vector<Discipline> Discipline::read_file(const string& path) {
   fp.ignore(buffer, '\n');
   string line;
   vector<Discipline> dis;
-  string d, c, pr1, c1, pr2, c2;
-  int j = 0, k = 0, l = 0, p = 0, x = 0;
+  string d, c, prs, cs;
+  int j = 0, k = 0, l = 0;
   while (getline(fp, line, '\n')) {
     for (int i = 0; i < (int) line.size(); i++) {
       if (line[i] == ',') {
@@ -34,30 +34,17 @@ vector<Discipline> Discipline::read_file(const string& path) {
         pos = k;
         break;
       }
-      pr1 += line[k];
+      prs += line[k];
     }
     for (l = pos + 1; l < (int) line.size(); l++) {
       if (line[l] == ',') {
         pos = l;
         break;
       }
-      c1 += line[l];
+      cs += line[l];
     }
-    for (p = pos + 1; p < (int) line.size(); p++) {
-      if (line[p] == ',') {
-        pos = p;
-        break;
-      }
-      pr2 += line[p];  
-    }
-    for (x = pos + 1; x < (int) line.size(); x++) {
-      if (line[x] == '\0') {
-        break;
-      }
-      c2 += line[x];  
-    }
-    dis.push_back({d, stoi(c), pr1, stoi(c1), pr2, stoi(c2)});
-    d = c = pr1 = c1 = pr2 = c2 = "";
+    dis.push_back({d, stoi(c), prs, stoi(cs)});
+    d = c = prs = cs = "";
   }
   return dis;
 }
