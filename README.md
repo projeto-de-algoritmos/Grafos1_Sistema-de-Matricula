@@ -24,15 +24,15 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 * Acesse o repositório e digite:
 
-  cd Grafos1_Sistema-de-Matricula e digite ```make```
+  ```cd Grafos1_Sistema-de-Matricula``` e digite ```make```
 
 * Logo em seguida, digite:
 
-  ```make run``` e aproveite com as opções do menu
+  ```make run``` e aproveite com as opções do menu.
 
 * Quando acabar de usar o projeto, digite:
 
-  ```make clean``` para apagar os arquivos da pasta bin e da pasta obj
+  ```make clean``` para apagar os arquivos da pasta bin e da pasta obj.
 
 ## Uso 
 
