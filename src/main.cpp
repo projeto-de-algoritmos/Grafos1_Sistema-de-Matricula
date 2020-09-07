@@ -4,9 +4,12 @@
 
 using namespace std;
 
+void tutorial();
+void pause(float delay1);
+
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(0);
+  // ios::sync_with_stdio(false);
+  // cin.tie(0);
   const int N = 50;
   Graph g(N);
   g.assign_idx_to_disciplines();
@@ -34,6 +37,7 @@ int main() {
     cout << "4 - Saber se uma matéria é alcançavel a partir de outra\n";
     cout << "5 - Mostrar o grau de conectividade de uma disciplina\n";
     cout << "6 - Mostrar o grafo\n";
+    cout << "7 - Tutorial sobre DFs\n";
     cout << "0 - Sair\n";
     cout << "Digite a opção desejada: ";
     cin >> option;
@@ -156,6 +160,14 @@ int main() {
         g.show();
         break;
       }
+      case 7: {
+        tutorial();
+        break;
+      }
+      case 0: {
+        cout << "Muito Obrigado, volte sempre!!!" << endl;
+        break;
+      }
       default:
         cout << "Digite uma opção válida, por favor!\n";
         break;
@@ -165,3 +177,168 @@ int main() {
   return 0;
 }
 
+void tutorial()
+{
+    char lixo;
+    string bee = "\U0001F41D";
+
+    system("clear");
+    cout << "Seja Muito Bem Vindo ou Bem Vinda ao Tuturial DFs de Grafos\n"
+         << endl;
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    system("clear");
+    printf("Vamos começar pela definição do nosso Método:\n\n");
+    cout << "Na teoria dos grafos, busca em profundidade (ou busca em profundidade-primeiro," << endl;
+    cout << "também conhecido em inglês por Depth-First Search - DFS) é um algoritmo usado para" << endl;
+    cout << "realizar uma busca ou travessia numa árvore, estrutura de árvore ou grafo. Intuitivamente," << endl;
+    cout << "o algoritmo começa num nó raiz (selecionando algum nó como sendo o raiz, no caso de um grafo)" << endl;
+    cout << "e explora tanto quanto possível cada um dos seus ramos, antes de retroceder(backtracking)." << endl;
+
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    cout << "Para facilitar o entedimento, o grafo e montado de forma semelhante a uma árvoré\n"
+         << endl;
+    cout << "Imagine o seguinte Grafo: 0-1 1-2 1-3 2-4 2-5 3-6 3-7" << endl;
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1          \n");
+    printf("          / \\          \n");
+    printf("        2     3       \n");
+    printf("       / \\   / \\       \n");
+    printf("      4   5  6   7 \n");
+
+    cout << "Então vamos a demonstração da DFs!!" << endl;
+
+    cout << "\nTecle ENTER para prosseguir";
+    setbuf(stdin, NULL);
+    scanf("%c", &lixo);
+    system("clear");
+
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1          \n");
+    printf("          / \\          \n");
+    printf("        2     3       \n");
+    printf("       / \\   / \\       \n");
+    printf("      4   5  6   7 \n");
+
+    cout << "\nDemonstração...\n"
+         << endl;
+
+    printf("           0          \n");
+    pause(1);
+    printf("           |          \n");
+    pause(1);
+    printf("           1          \n");
+    pause(1);
+    printf("          /           \n");
+    pause(1);
+    printf("        2            \n");
+    pause(1);
+    printf("       /           \n");
+    pause(1);
+    printf("      4    \n");
+
+    cout << "Chegamos ao ponto mais profundo, hora de voltar um pouco (ponto 2)..." << endl;
+    pause(3);
+
+    system("clear");
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1          \n");
+    printf("          /           \n");
+    printf("        2            \n");
+    printf("       /        \n");
+    printf("      4  \n");
+
+    system("clear");
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1          \n");
+    printf("          /           \n");
+    printf("        2*            \n");
+    printf("       / \\        \n");
+    cout << "      4";
+    pause(1);
+    printf("   5\n");
+
+    cout << "Chegamos ao ponto mais profundo, hora de voltar um pouco (ponto 1)..." << endl;
+    pause(3);
+
+    system("clear");
+
+    printf("Atualmente o nosso grafo: \n");
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1*          \n");
+    printf("          /           \n");
+    printf("        2            \n");
+    printf("       / \\          \n");
+    printf("      4   5 \n");
+
+    cout << "Grafo a partir do ponto 1" << endl;
+    pause(4);
+
+    system("clear");
+
+    printf("           1          \n");
+    pause(1);
+    printf("            \\          \n");
+    pause(1);
+    printf("              3       \n");
+    pause(1);
+    printf("              /        \n");
+    pause(1);
+    printf("             6    \n");
+
+    cout << "Chegamos no ponto mais profundo novamente. Vamos ver como nosso grafo esta!" << endl;
+    pause(5);
+
+    system("clear");
+
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1          \n");
+    printf("          / \\          \n");
+    printf("        2    3*       \n");
+    printf("       / \\   /       \n");
+    printf("      4   5  6 \n");
+
+    cout << "Vamos até o ponto mais profundo do nó 3" << endl;
+    pause(5);
+
+    system("clear");
+    printf("               3       \n");
+    printf("              / \\       \n");
+    printf("             6   \\\n");
+    pause(2);
+    printf("                  7 \n");
+
+    cout << "Chegamos ao nó mais profundo e encerramos toda a busca do nosso Grafo " << bee << endl
+         << endl;
+}
+
+void pause(float delay1)
+{
+
+    if (delay1 < 0.001)
+        return; // pode ser ajustado e/ou evita-se valores negativos.
+
+    float inst1 = 0, inst2 = 0;
+
+    inst1 = (float)clock() / (float)CLOCKS_PER_SEC;
+
+    while (inst2 - inst1 < delay1)
+    {
+        inst2 = (float)clock() / (float)CLOCKS_PER_SEC;
+    }
+
+    return;
+}
