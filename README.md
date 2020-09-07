@@ -1,44 +1,53 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Sistema de Matrícula
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 1<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 16/0133394  |  Lucas Fellipe Carvalho Moreira |
+| 15/0009917  |  Gabriel Alves S. de Souza |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
-
+## Sobre
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: C++17<br>
+**Pré-requisitos**: C++17 e o Makefile
+**Execução do Projeto:**
+
+* Clone o repositório
+
+  ```git clone https://github.com/projeto-de-algoritmos/Grafos1_Sistema-de-Matricula.git```
+
+* Acesse o repositório e digite:
+
+  cd Grafos1_Sistema-de-Matricula e digite ```make```
+
+* Logo em seguida, digite:
+
+  ```make run``` e aproveite com as opções do menu
+
+* Quando acabar de usar o projeto, digite:
+
+  ```make clean``` para apagar os arquivos da pasta bin e da pasta obj
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Para usar, basta digitar as opções do menu:
+
+![Menu](/Users/lucasfellipe/Desktop/projeto de algoritmos/Grafos1_Sistema-de-Matricula/assets/images/menu.png)
+
+Opções:
+
+* 1 - Lista todas as disciplinas do currículo de *software* da Universidade de Brasília - UnB;
+* 2 - Realiza uma busca em profundidade (DFS) para saber quais são os pré-requisitos de uma determinada disciplina;
+* 3 - Realiza uma busca em largura (BFS) para saber quais são os pré-requisitos de uma determinada disciplina;
+* 4 - Mostra se é possível chegar em uma disciplina a partir de outra disciplina usando a busca em largura (BFS);
+* 5 - Mostra o grau de conectividade de um vértice especifíco com todos os outros vértices;
+* 6 - Mostra o grafo.
 
 
 

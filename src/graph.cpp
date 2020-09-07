@@ -17,7 +17,7 @@ void Graph::assign_idx_to_disciplines() {
   Discipline d;
   d.get_disciplines_from_csv("data/disciplines.csv");
   for (int i = 0; i < (int) d.disciplines.size(); i++) {
-    if (d.disciplines[i].name == "NULL") {
+    if (d.disciplines[i].name == "null") {
       continue;
     }
     mdisciplines[i] = {d.disciplines[i].name, d.disciplines[i].code};
@@ -28,7 +28,7 @@ void Graph::assign_idx_to_prerequisites() {
   Discipline d;
   d.get_disciplines_from_csv("data/disciplines.csv");
   for (int i = 0; i < (int) d.disciplines.size(); i++) {
-    if (d.disciplines[i].prerequisites == "NULL") {
+    if (d.disciplines[i].prerequisites == "null") {
       continue;
     }
     mprerequisites[i] = {d.disciplines[i].prerequisites, d.disciplines[i].codes};

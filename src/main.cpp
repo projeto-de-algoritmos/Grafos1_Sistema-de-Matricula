@@ -23,6 +23,7 @@ int main() {
   g.add(38, 32); g.add(39, 35); g.add(40, 30);
   g.add(42, 22); g.add(44, 43);
   int option = -1;
+  system("clear");
   cout << "\t\tHello, amigo de software! Vou te mostrar um menu de opções.\n\n\n";
   do {
     int input;
@@ -34,6 +35,7 @@ int main() {
     cout << "5 - Mostrar o grau de conectividade de uma disciplina\n";
     cout << "6 - Mostrar o grafo\n";
     cout << "0 - Sair\n";
+    cout << "Digite a opção desejada: ";
     cin >> option;
     vector<bool> vis(N, false);
     system("clear");
@@ -60,7 +62,7 @@ int main() {
           cout << "Essa disciplina não possui pré-requisitos!\n";
         } else {
           for (int i = 0; i < (int) g.prerequisites.size(); i++) {
-            if (g.mprerequisites[g.prerequisites[i]].first == "") {
+            if (g.mprerequisites[g.prerequisites[i]].first == "NULL") {
               continue;
             }
             if (!first) {
@@ -91,7 +93,7 @@ int main() {
         } else {
           cout << "Esse é o caminho que você precisa percorrer para chegar em " << g.mdisciplines[input].first << ", em ordem!\n";
           for (int i = 0; i < (int) g.prerequisites.size(); i++) {
-            if (g.mprerequisites[g.prerequisites[i]].first == "") {
+            if (g.mprerequisites[g.prerequisites[i]].first == "NULL") {
               continue;
             }
             if (!first) {
@@ -124,7 +126,7 @@ int main() {
         } else {
           cout << "A disciplina [" << g.mdisciplines[end].first << " & " << g.mdisciplines[end].second << "] não é alcaçavel a partir da disciplina [" << g.mdisciplines[start].first << " & " << g.mdisciplines[start].second << "]\n";
         }
-        cout << "Para saber o caminho que você deve percorrer, basta usar a DFS e/ou a BFS\n";
+        cout << "Para saber o caminho que você deve percorrer, basta usar a DFS ou a BFS\n";
         break;
       }
       case 5: {
@@ -154,6 +156,9 @@ int main() {
         g.show();
         break;
       }
+      default:
+        cout << "Digite uma opção válida, por favor!\n";
+        break;
     }
     cout << "\n\n\n";
   } while (option != 0);
