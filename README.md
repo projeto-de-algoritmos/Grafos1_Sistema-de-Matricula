@@ -38,7 +38,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 Para usar, basta digitar as opções do menu:
 
-![Menu](/Users/lucasfellipe/Desktop/projeto de algoritmos/Grafos1_Sistema-de-Matricula/assets/images/menu.png)
+![Menu](assets/images/menu.png)
 
 Opções:
 
