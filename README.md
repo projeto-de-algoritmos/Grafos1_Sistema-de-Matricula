@@ -38,7 +38,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 Para usar, basta digitar as opções do menu:
 
-![Menu](/Users/lucasfellipe/Desktop/projeto de algoritmos/Grafos1_Sistema-de-Matricula/assets/images/menu.png)
+![Menu](assets/images/menu.png)
 
 Opções:
 
@@ -47,7 +47,8 @@ Opções:
 * 3 - Realiza uma busca em largura (BFS) para saber quais são os pré-requisitos de uma determinada disciplina;
 * 4 - Mostra se é possível chegar em uma disciplina a partir de outra disciplina usando a busca em largura (BFS);
 * 5 - Mostra o grau de conectividade de um vértice especifíco com todos os outros vértices;
-* 6 - Mostra o grafo.
+* 6 - Mostra o grafo;
+* 0 - Sair.
 
 
 
