@@ -19,28 +19,28 @@ void Discipline::get_disciplines_from_csv(const string& path) {
         pos = i;
         break;
       }
-      d += line[i];
+      d += toupper(line[i]);
     }
     for (j = pos + 1; j < (int) line.size(); j++) {
       if (line[j] == ',') {
         pos = j;
         break;
       }
-      c += line[j];
+      c += toupper(line[j]);
     }
     for (k = pos + 1; k < (int) line.size(); k++) {
       if (line[k] == ',') {
         pos = k;
         break;
       }
-      prs += line[k];
+      prs += toupper(line[k]);
     }
     for (l = pos + 1; l < (int) line.size(); l++) {
       if (line[l] == ',') {
         pos = l;
         break;
       }
-      cs += line[l];
+      cs += toupper(line[l]);
     }
     disciplines.push_back({d, stoi(c), prs, stoi(cs)});
     d = c = prs = cs = "";
@@ -52,7 +52,8 @@ void Discipline::add(string _name, int _code, string _prerequisites, int _codes)
 }
 
 void Discipline::show_disciplines() {
-  cout << "Nome" << " " << "Código" << '\n';
+  get_disciplines_from_csv("data/disciplines.csv");
+  cout << "\t\tAqui estão as disciplinas do CURRICULUM DE ENGENHARIA DE SOFTWARE (Nome e Código) da Universidade de Brasília!\n\n";
   for (int i = 0; i < (int) disciplines.size(); i++) {
     cout << disciplines[i].name << ": " << disciplines[i].code << '\n';
   }

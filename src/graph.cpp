@@ -17,6 +17,9 @@ void Graph::assign_idx_to_disciplines() {
   Discipline d;
   d.get_disciplines_from_csv("data/disciplines.csv");
   for (int i = 0; i < (int) d.disciplines.size(); i++) {
+    if (d.disciplines[i].name == "NULL") {
+      continue;
+    }
     mdisciplines[i] = {d.disciplines[i].name, d.disciplines[i].code};
   }
 }
@@ -25,7 +28,7 @@ void Graph::assign_idx_to_prerequisites() {
   Discipline d;
   d.get_disciplines_from_csv("data/disciplines.csv");
   for (int i = 0; i < (int) d.disciplines.size(); i++) {
-    if (d.disciplines[i].prerequisites == "null") {
+    if (d.disciplines[i].prerequisites == "NULL") {
       continue;
     }
     mprerequisites[i] = {d.disciplines[i].prerequisites, d.disciplines[i].codes};
@@ -33,12 +36,16 @@ void Graph::assign_idx_to_prerequisites() {
 }
 
 void Graph::show() {
+  cout << "AQUI ESTÁ O GRAFO COM AS DISCIPLINAS E OS PREREQUISITOS" << "\n\n\n";
   for (int v = 0; v < _size; v++) {
-    cout << mdisciplines[v].first << " ->";
-    for (int u : g[v]) {
-      cout << " " << mdisciplines[u].first;
+    if (mdisciplines[v].first == "") {
+        continue;
     }
-    cout << "\n";
+    cout << "[" << mdisciplines[v].first << "] ->";
+    for (int u : g[v]) {
+      cout << " [" << mdisciplines[u].first << "]";
+    }
+    cout << '\n';
   }
 }
 
