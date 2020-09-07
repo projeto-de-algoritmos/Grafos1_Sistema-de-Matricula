@@ -10,6 +10,13 @@
 | 15/0009917  |  Gabriel Alves S. de Souza |
 
 ## Sobre
+<p>
+Dentro da Universidade há uma grande dificuldade em achar o fluxo de uma matéria em específico, por vezes, essas matérias possuem várias outras como pré-requisito. Tendo em vista essa dificuldade, desenvolvelmos uma aplicação na qual você poderá achar o fluxo de uma matéria em específico do curso de Engenharia de Software da Universidade de Brasília.
+</p>
+<p>
+Como base, utilizamos a estrutura de Grafos para a implementação desse aplicativo. E além disso, você poderá aprender um pouco como funciona a DFS, com o nosso tutorial interativo. Então divirta-se e aprenda bastante com esse projeto!
+</p>
+
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
