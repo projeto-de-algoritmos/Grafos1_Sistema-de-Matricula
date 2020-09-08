@@ -53,9 +53,7 @@ vector<int> Graph::connectivity_level(int v) {
   vector<int> w(_size, 0);
   vector<int> neigh = g[v];
   for (int i : neigh) {
-    for (int u : g[i]) {
-      w[u]++;
-    }
+    w[i]++;
   }
   return w;
 }
