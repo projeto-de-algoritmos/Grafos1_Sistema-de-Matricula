@@ -18,7 +18,18 @@ Como base, utilizamos a estrutura de Grafos para a implementação desse aplicat
 </p>
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+### Menu
+![Menu](assets/images/menu.png)
+### Tela das disciplinas
+![Tela 1](assets/images/tela1.png)
+### Exemplo de um caminho realizado por uma DFS ou BFS
+![Tela 2](assets/images/tela2.png)
+### Screenshot mostrando se uma disciplina é alcançavel por outra
+![Tela 3](assets/images/tela3.png)
+### Grau de conectividade de uma disciplina
+![Tela 4](assets/images/tela4.png)
+### Grafo
+![Tela 5](assets/images/tela5.png)
 
 ## Instalação 
 **Linguagem**: C++17<br>
