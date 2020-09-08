@@ -37,7 +37,7 @@ int main() {
     cout << "4 - Saber se uma matéria é alcançavel a partir de outra\n";
     cout << "5 - Mostrar o grau de conectividade de uma disciplina\n";
     cout << "6 - Mostrar o grafo\n";
-    cout << "7 - Tutorial sobre DFs\n";
+    cout << "7 - Tutorial sobre DFS\n";
     cout << "0 - Sair\n";
     cout << "Digite a opção desejada: ";
     cin >> option;
@@ -142,6 +142,7 @@ int main() {
         cout << "Por favor, digite o índice da disciplina para saber o grau de conectividade: ";
         cin >> input;
         auto gc = g.connectivity_level(input);
+        system("clear");
         cout << "Este é o grau de conectividade da disciplina [" << g.mdisciplines[input].first << " & " << g.mdisciplines[input].second << "]\n";
         bool first = true;
         for (int i = 0; i < (int) gc.size(); i++) {
@@ -165,7 +166,7 @@ int main() {
         break;
       }
       case 0: {
-        cout << "Muito Obrigado, volte sempre!!!" << endl;
+        cout << "Muito obrigado, volte sempre!" << endl;
         break;
       }
       default:
@@ -323,10 +324,17 @@ void tutorial()
 
     cout << "Chegamos ao nó mais profundo e encerramos toda a busca do nosso Grafo " << bee << endl
          << endl;
+    cout << "E assim o grafo é completamente percorrido!" << '\n';
+    printf("           0          \n");
+    printf("           |          \n");
+    printf("           1          \n");
+    printf("          / \\          \n");
+    printf("        2     3       \n");
+    printf("       / \\   / \\       \n");
+    printf("      4   5  6   7 \n");
 }
 
-void pause(float delay1)
-{
+void pause(float delay1) {
 
     if (delay1 < 0.001)
         return; // pode ser ajustado e/ou evita-se valores negativos.
@@ -335,8 +343,7 @@ void pause(float delay1)
 
     inst1 = (float)clock() / (float)CLOCKS_PER_SEC;
 
-    while (inst2 - inst1 < delay1)
-    {
+    while (inst2 - inst1 < delay1) {
         inst2 = (float)clock() / (float)CLOCKS_PER_SEC;
     }
 
